@@ -9,6 +9,15 @@
         width: 300px;
     }
 
+    header .logo{
+        margin-right: 200px;
+        font-size: 30px;
+    }
+
+    header .profile {
+        margin-right: 150rem;
+
+    }
 }
 
 @media screen and (min-width:1000px){

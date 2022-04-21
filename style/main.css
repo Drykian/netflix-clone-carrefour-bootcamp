@@ -1,56 +1,177 @@
-:root{
-    --vermelho:#E50914;
-    --preta:#141414;
+:root {
+    --vermelho: #E50914;
+    --preta: #141414;
 }
 
-*{
-    margin:0;
-    padding:0;
+* {
+    margin: 0;
+    padding: 0;
     box-sizing: border-box;
 }
 
 /*elementos base*/
-body{
-   background: var(--preta);
-   font-family: 'Arial', Times, serif;
-   color:white;
+body {
+    background: var(--preta);
+    font-family: 'Arial', Times, serif;
+    color: white;
 }
 
+header {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
 
-header .container{
-    display:flex;
+header .container {
+    display: flex;
     flex-direction: row;
     align-items: center;
-    justify-content: space-between;
-    
+
 }
 
-header .logo{
+header .logo {
     margin-left: 5px;
     color: var(--vermelho);
     font-family: 'Arial Black', Times;
-    font-size:40px;
+    font-size: 40px;
 }
 
-header nav a{
-    text-decoration:none;
-    color:#AAA;
-    margin-right: 10px;
+header nav {
+    margin-left: 3%;
+    width: 400px;
+}
+
+header nav a {
+    text-decoration: none;
+    color: #AAA;
+    margin-left: 5px;
 }
 
 
-header nav a:hover{
-    color:#fff;
+header nav a:hover {
+    color: #fff;
 }
+
+/*elementos do perfil*/
+
+header .profile {
+    margin-right: 5rem;
+}
+
+header .profile img {
+    width: 50px;
+    margin-top: 5px;
+}
+
+.profile .icon{
+    width: 10px;
+    fill: white;
+    margin-bottom: 15px;
+}
+
+.profile .acc-box{
+    position: absolute;
+    width: 100px;
+    display:flex;
+    flex-direction: column;
+    background-color: rgba(0, 0, 0, .70);
+    border-style: solid;
+    border-width: 1px;
+    border-color:  rgba(255, 255, 255, .30);
+}
+
+.account, .quit{
+    text-decoration: none;
+    color: #AAA;
+    margin: 10px;
+    text-align: center;
+}
+.account:hover, .quit:hover {
+    color: #fff;
+}
+
+
+/*informações da série ou filme*/
+header .movie-box{
+    position: absolute;
+    width: 600px;
+    height: 500px;
+    margin: 7% 30%;
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(43, 41, 41);
+    z-index: 2;
+    color: #AAA;
+}
+
+header .movie-box .movie{
+    background: url('../img/HouseOfCards-Logo.png');
+
+    height: 550px;
+    background-size: cover;
+}
+
+header .movie-box p{
+    margin-top: 15px;
+    margin-right: 15px;
+    margin-bottom: 15px;
+    width: 90%;
+    text-align: justify;
+}
+
+header .movie-box .movie-info{
+    margin-left: 15px;
+    display:flex;
+    flex-direction: row;
+}
+
+header .movie-box .close{
+    padding: 7px;
+    width: 25px;
+    font-family: 'Arial Black', Times;
+    border-radius: 50%;
+    color: #AAA;
+    margin-left: 93%;
+    margin-top: 15px;
+}
+
+/*trailer*/
+header .trailer{
+    position: absolute;
+    width: 600px;
+    height: 400px;
+    margin: 7% 30%;
+    display:flex;
+    flex-direction: column;
+    background-color: rgb(43, 41, 41);
+    z-index: 2;
+    color: #AAA;
+}
+
+header .trailer .movie-trailer{
+    margin-top: 10px;
+}
+
+header .trailer .close-trailer{
+    padding: 7px;
+    width: 25px;
+    font-family: 'Arial Black', Times;
+    border-radius: 50%;
+    color: #AAA;
+    margin-left: 93%;
+    margin-top: 15px;
+}
+
 
 /*filme principal*/
-.filme-principal{
-    font-size:16px;
-    background: linear-gradient(rgba(0,0,0,.50),rgba(0,0,0,.50)100%),  url('/img/capa-house.jpg');
 
-    height:400px;
-    background-size:cover;
- 
+.filme-principal {
+    font-size: 16px;
+    background: linear-gradient(rgba(0, 0, 0, .50), rgba(0, 0, 0, .50)), url('../img/capa-house.jpg');
+
+    height: 550px;
+    background-size: cover;
+
 
     display: flex;
     flex-direction: column;
@@ -59,24 +180,24 @@ header nav a:hover{
 }
 
 
-.filme-principal .descricao{
+.filme-principal .descricao {
     margin-top: 10px;
     margin-bottom: 40px;
 }
 
 
-.filme-principal .titulo{
+.filme-principal .titulo {
     margin-top: 15%;
     font-size: 40px;
     font-family: 'Trebuchet MS', Arial, sans-serif;
 }
 
-.botao{
-    background-color: rgba(0,0,0,.50);
-    border:none;
+.botao {
+    background-color: rgba(0, 0, 0, .50);
+    border: none;
     color: white;
 
-    padding:15px 30px;
+    padding: 15px 30px;
     margin-right: 15px;
     font-size: 12px;
 
@@ -84,25 +205,25 @@ header nav a:hover{
     transition: .3s ease all;
 }
 
-.botao:hover{
-    background-color:white;
-    color:black;
+.botao:hover {
+    background-color: white;
+    color: black;
 }
 
-.botao i{
+.botao i {
     margin-right: 8px;
 }
 
 
-.container{
+.container {
     margin-left: 20px;
 }
 
-.filme-principal .container{
+.filme-principal .container {
     width: 70%;
 }
 
-.box-filme{
+.box-filme {
     height: 100%;
     width: 100%;
     display: block;
@@ -110,25 +231,6 @@ header nav a:hover{
 }
 
 
-.carrosel-filmes{
-    margin-top:5px;
+.carrosel-filmes {
+    margin-top: 5px;
 }
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
